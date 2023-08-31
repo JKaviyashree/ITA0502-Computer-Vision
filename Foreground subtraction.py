@@ -17,7 +17,7 @@ rect = (150,50,500,470)
 
 # apply grabCut method to extract the background
 cv2.grabCut(img,mask,rect,bgdModel,fgdModel,20,cv2.GC_INIT_WITH_RECT)
-mask2 = np.where((mask==2)|(mask==0),0,1).astype('uint8')
+mask2 = np.where((mask==0)|(mask==2),1,0).astype('uint8')
 img = img*mask2[:,:,np.newaxis]
 
 
