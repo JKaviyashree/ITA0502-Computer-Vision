@@ -4,7 +4,6 @@ import cv2
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
 # Load the image
-#image_path = "C:/Users/vitta/Pictures/Screenshots/Screenshot (123).png"
 image_path = r"C:\Computer Vision\jk-v-jimin.jpg"
 img = cv2.imread(image_path)
 img=cv2.resize(img,(400,400))
